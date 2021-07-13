@@ -2,11 +2,10 @@ import React from "react";
 
 class Car extends React.Component {
   render() {
+    const { color, year, make, model, tag } = this.props.car;
     return (
       <h2>
-        Hi, I am a {this.props.car.color} {this.props.car.year}{" "}
-        {this.props.car.make} {this.props.car.model} with tag{" "}
-        {this.props.car.tag}{" "}
+        Hi, I am a {color} {year} {make} {model} with tag {tag}
       </h2>
     );
   }
