@@ -3,11 +3,13 @@ import Car from "./car";
 
 class Garage extends React.Component {
   render() {
+    const { owner, cars } = this.props.ginfo;
     return (
       <div>
-        <h1>{this.props.owner}&apos;s Garage</h1>
-        <Car car={this.props.car1} />
-        <Car car={this.props.car2} />
+        <h1>{owner}&apos;s Garage</h1>
+        {cars.map((car) => (
+          <Car car={car} />
+        ))}
       </div>
     );
   }
