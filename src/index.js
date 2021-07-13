@@ -4,14 +4,40 @@ import Garage from "./garage";
 
 ReactDOM.render(
   <div>
-    <Garage owner="Jeff" car1="Ford" color1="red" car2="Chevy" color2="blue" />
+    <Garage
+      owner="Jeff"
+      car1={{
+        make: "Ford",
+        model: "Mustang",
+        year: 2019,
+        color: "red",
+        tag: "FL ABC123",
+      }}
+      car2={{
+        make: "Chevrolet",
+        model: "Corvette",
+        year: 1967,
+        color: "blue",
+        tag: "FL GO2FST",
+      }}
+    ></Garage>
     <Garage
       owner="Elon"
-      car1="Honda"
-      color1="green"
-      car2="Hyundai"
-      color2="black"
-    />
+      car1={{
+        make: "Honda",
+        model: "CR-V",
+        year: 2019,
+        color: "green",
+        tag: "ME GAS314",
+      }}
+      car2={{
+        make: "Hyundai",
+        model: "Elantra",
+        year: 2020,
+        color: "black",
+        tag: "NV TSLA",
+      }}
+    ></Garage>{" "}
   </div>,
   document.getElementById("root")
 );
