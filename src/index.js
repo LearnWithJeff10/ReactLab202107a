@@ -4,7 +4,8 @@ import Garage from "./garage";
 
 ReactDOM.render(
   <div>
-    <Garage />
+    <Garage owner="Jeff" />
+    <Garage owner="Elon" />
   </div>,
   document.getElementById("root")
 );

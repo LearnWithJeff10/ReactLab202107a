@@ -6,7 +6,7 @@ class Garage extends React.Component {
   render() {
     return (
       <div>
-        <h1>Jeff&apos;s Garage</h1>
+        <h1>{this.props.owner}&apos;s Garage</h1>
         <Car make="Ford" />
         <Car make="Chevy" />
       </div>
