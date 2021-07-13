@@ -1,0 +1,7 @@
+div.garage h1 {
+  background-color: #ddd;
+}
+
+h2:last-of-type.car {
+  margin-bottom: 4rem;
+}
