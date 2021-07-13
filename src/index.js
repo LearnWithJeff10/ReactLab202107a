@@ -12,10 +12,22 @@ class Car extends React.Component {
   render() {
     return (
       <h2>
-        Hi, I am {this.state.color} Car made by {this.props.make}!
+        Hi, I am {this.state.color} car made by {this.props.make}!
       </h2>
     );
   }
 }
 
-ReactDOM.render(<Car make="Ford" />, document.getElementById("root"));
+class Garage extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>Jeff&apos;s Garage</h1>
+        <Car make="Ford" />
+        <Car make="Chevy" />
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<Garage />, document.getElementById("root"));
