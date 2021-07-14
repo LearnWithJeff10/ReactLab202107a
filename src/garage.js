@@ -11,8 +11,8 @@ class Garage extends React.Component {
           <h1 className="card-title text-light bg-primary pl-1">
             {owner}&apos;s Garage
           </h1>
-          {cars.map((car) => (
-            <Car car={car} />
+          {cars.map((car, index) => (
+            <Car key={index} car={car} />
           ))}
         </div>
       </div>
