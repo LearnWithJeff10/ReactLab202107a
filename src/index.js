@@ -42,8 +42,8 @@ const cars = [
 
 ReactDOM.render(
   <div>
-    <Garage owner="Jeff" car1={cars[0]} car2={cars[1]} car3={cars[1]} />
-    <Garage owner="Elon" car1={cars[2]} car2={cars[3]} car3={cars[4]} />
+    <Garage owner="Jeff" cars={cars.slice(0, 2)} />
+    <Garage owner="Elon" cars={cars.slice(2, 5)} />
   </div>,
   document.getElementById("root")
 );
