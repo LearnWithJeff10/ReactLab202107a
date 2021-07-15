@@ -40,10 +40,17 @@ const cars = [
   },
 ];
 
+const garages = [
+  { owner: "Jeff", cars: cars.slice(0, 2) },
+  { owner: "Elon", cars: cars.slice(2, 5) },
+  { owner: "Richard", cars: [cars[0]] },
+];
+
 ReactDOM.render(
   <div>
-    <Garage owner="Jeff" cars={cars.slice(0, 2)} />
-    <Garage owner="Elon" cars={cars.slice(2, 5)} />
+    {garages.map((ginfo) => (
+      <Garage ginfo={ginfo} />
+    ))}
   </div>,
   document.getElementById("root")
 );
