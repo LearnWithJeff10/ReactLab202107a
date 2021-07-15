@@ -47,7 +47,7 @@ const garages = [
 ];
 
 ReactDOM.render(
-  <div>
+  <div className="container">
     {garages.map((ginfo) => (
       <Garage ginfo={ginfo} />
     ))}
