@@ -6,12 +6,8 @@ class Car extends React.Component {
     needsWork: false,
   };
 
-  handleCarReady = () => {
-    this.setState({ needsWork: false });
-  };
-
-  handleCarNotReady = () => {
-    this.setState({ needsWork: true });
+  toggleCarReady = () => {
+    this.setState({ needsWork: !this.state.needsWork });
   };
 
   render() {
@@ -27,16 +23,10 @@ class Car extends React.Component {
         >
           Hi, I am a {color} {year} {make} {model} with tag {tag}
           <button
-            onClick={this.handleCarReady}
-            className="btn btn-sm btn-success"
+            onClick={this.toggleCarReady}
+            className={"btn btn-sm btn-primary ml-2 float-right"}
           >
-            Ready
-          </button>
-          <button
-            onClick={this.handleCarNotReady}
-            className="btn btn-sm btn-warning"
-          >
-            Not Ready
+            {this.state.needsWork ? "Make Available" : "Take out of service"}
           </button>
         </h2>
       </>
