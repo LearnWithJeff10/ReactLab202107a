@@ -5,7 +5,7 @@ class Car extends React.Component {
     const { make, model, year, color, tag } = this.props.car;
 
     return (
-      <h2 style={{ color: "blue" }}>
+      <h2 style={{ color: color }}>
         I am a {color} {year} {make} {model} with tag {tag}!
       </h2>
     );
