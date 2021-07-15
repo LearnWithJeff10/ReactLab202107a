@@ -38,17 +38,26 @@ const cars = [
     color: "silver",
     tag: "CA SPCBALL",
   },
+  {
+    make: "Porsche",
+    model: "Boxster",
+    year: 2018,
+    color: "brown",
+    tag: "PA BOXY18",
+  },
 ];
 
 const garages = [
   { owner: "Jeff", cars: cars.slice(0, 2) },
   { owner: "Elon", cars: cars.slice(2, 5) },
+  { owner: "Richard", cars: cars.slice(5, 7) },
 ];
 
 ReactDOM.render(
   <div>
-    <Garage ginfo={garages[0]}></Garage>
-    <Garage ginfo={garages[1]}></Garage>
+    {garages.map((gi, index) => (
+      <Garage ginfo={gi} key={index} />
+    ))}
   </div>,
   document.getElementById("root")
 );
