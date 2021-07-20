@@ -3,12 +3,11 @@ import "./car.css";
 
 class Car extends React.Component {
   state = {
-    needsWork: false,
+    ready: true,
   };
 
-  doSomething = () => {
-    console.log("Setting needsWork to true");
-    this.setState({ needsWork: true });
+  handleReady = () => {
+    this.setState({ ready: !this.state.ready });
   };
 
   render() {
@@ -16,12 +15,18 @@ class Car extends React.Component {
 
     return (
       <h2
-        className={this.state.needsWork ? "needswork" : " "}
+        className={!this.state.ready ? "needswork" : " "}
         style={{ color: color }}
       >
         I am a {color} {year} {make} {model} with tag {tag}!
-        <button onClick={this.doSomething} className="btn btn-sm btn-warning">
-          Not ready
+        <button
+          onClick={this.handleReady}
+          className={
+            "btn btn-sm ml-2 " +
+            (!this.state.ready ? "btn-success" : "btn-warning")
+          }
+        >
+          {!this.state.ready ? "Ready" : "Needs Work"}
         </button>
       </h2>
     );
